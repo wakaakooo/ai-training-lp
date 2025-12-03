@@ -51,18 +51,17 @@
     <!-- ヘッダー -->
     <header class="header">
         <div class="container header-inner">
-            <a href="index.html" class="logo">
-                <span class="logo-text">AIDX™</span>
-            </a>
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="index.html#about">特徴</a></li>
-                    <li class="nav-item"><a href="index.html#curriculum">カリキュラム</a></li>
-                    <li class="nav-item"><a href="index.html#pricing">料金</a></li>
-                    <li class="nav-item"><a href="index.html#faq">FAQ</a></li>
-                </ul>
-                <a href="https://timerex.net/s/soumu-001_81ed/41ad7442/" target="_blank" class="btn-header">無料相談</a>
+            <a href="index.html" class="logo">withAI<span>.</span></a>
+            <nav class="header-nav" aria-label="メインナビゲーション">
+                <a href="index.html#about" class="nav-link">特徴</a>
+                <a href="index.html#subsidy" class="nav-link">助成金</a>
+                <a href="index.html#curriculum" class="nav-link">カリキュラム</a>
+                <a href="index.html#pricing" class="nav-link">料金</a>
+                <a href="https://timerex.net/s/soumu-001_81ed/41ad7442/" target="_blank" class="header-btn">無料相談</a>
             </nav>
+            <button class="mobile-menu-btn" aria-label="メニューを開く">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </header>
 
@@ -76,10 +75,10 @@
 
     <main>
         <!-- ① 成果データ -->
-        <section class="section section--data">
+        <section class="section section--data" aria-labelledby="data-title">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">数字で見る導入成果</h2>
+                    <h2 id="data-title" class="section-title">数字で見る導入成果</h2>
                     <p class="section-subtitle">多くの企業様が、短期間で劇的な業務改善を実現しています。</p>
                 </div>
                 <div class="data-grid">
@@ -112,9 +111,9 @@
         </section>
 
         <!-- ② 導入事例詳細 -->
-        <section class="section case-detail-section">
+        <section class="section case-detail-section" aria-labelledby="cases-title">
             <div class="container">
-                <h2 class="case-category-title">業界別 導入事例</h2>
+                <h2 id="cases-title" class="case-category-title">業界別 導入事例</h2>
 
                 <div class="case-grid">
                     <div class="case-card">
@@ -177,12 +176,12 @@
         </section>
 
         <!-- ③ 業務別改善イメージ -->
-        <section class="section section--scenarios" style="background: #F8FAFC;">
+        <section class="section section--scenarios" style="background: #F8FAFC;" aria-labelledby="scenarios-title">
             <div class="container">
-                <h2 class="case-category-title">業務別 改善イメージ</h2>
+                <h2 id="scenarios-title" class="case-category-title">業務別 改善イメージ</h2>
                 <div class="scenario-list">
                     <div class="scenario-item">
-                        <div class="scenario-head">営業</div>
+                        <h3 class="scenario-head">営業</h3>
                         <ul>
                             <li>提案資料：3時間 → 30分</li>
                             <li>顧客ヒアリングまとめ自動化</li>
@@ -190,7 +189,7 @@
                         </ul>
                     </div>
                     <div class="scenario-item">
-                        <div class="scenario-head">飲食・小売</div>
+                        <h3 class="scenario-head">飲食・小売</h3>
                         <ul>
                             <li>メニュー開発：1.5ヶ月 → 2週間</li>
                             <li>POP・説明文の自動生成</li>
@@ -198,7 +197,7 @@
                         </ul>
                     </div>
                     <div class="scenario-item">
-                        <div class="scenario-head">人事</div>
+                        <h3 class="scenario-head">人事</h3>
                         <ul>
                             <li>面談記録 → レポート化</li>
                             <li>求人票のブラッシュアップ高速化</li>
@@ -206,7 +205,7 @@
                         </ul>
                     </div>
                     <div class="scenario-item">
-                        <div class="scenario-head">事務・総務</div>
+                        <h3 class="scenario-head">事務・総務</h3>
                         <ul>
                             <li>文書作成の自動化</li>
                             <li>社内規定の要約・整形</li>
@@ -214,7 +213,7 @@
                         </ul>
                     </div>
                     <div class="scenario-item">
-                        <div class="scenario-head">経理・財務</div>
+                        <h3 class="scenario-head">経理・財務</h3>
                         <ul>
                             <li>データチェック</li>
                             <li>請求書内容の齟齬検出</li>
@@ -248,7 +247,7 @@
         <div class="container footer-inner">
             <div class="footer-top">
                 <a href="cases.html" class="footer-logo">導入事例</a>
-                <nav class="footer-nav">
+                <nav class="footer-nav" aria-label="フッターナビゲーション">
                     <a href="https://timerex.net/s/soumu-001_81ed/41ad7442/" target="_blank">無料相談</a>
                     <a href="https://www.withprojects.co.jp/about-us/" target="_blank">会社案内</a>
                     <a href="https://www.withprojects.co.jp/privacypolicy/" target="_blank">プライバシーポリシー</a>
