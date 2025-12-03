@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>無料相談・お申し込み | withAI</title>
+    <meta name="description" content="withAIへの無料相談・お申し込みフォームです。">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Outfit:wght@400;600;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ヘッダー (簡易版) -->
+    <header class="header header--simple">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">withAI<span>.</span></a>
+            <a href="index.html" class="nav-link">← トップに戻る</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="section section--contact">
+            <div class="container">
+                <div class="section-header">
+                    <h1 class="section-title">無料相談・お申し込み</h1>
+                    <p class="section-subtitle">以下のフォームよりお気軽にお問い合わせください。<br>担当者より1営業日以内にご連絡いたします。</p>
+                </div>
+
+                <form class="contact-form" action="#" method="POST"
+                    onsubmit="event.preventDefault(); alert('送信しました（デモ）');">
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">メールアドレス <span class="required">必須</span></label>
+                        <input type="email" id="email" name="email" class="form-input"
+                            placeholder="example@company.co.jp" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="plan" class="form-label">ご希望のプラン <span class="required">必須</span></label>
+                        <div class="select-wrapper">
+                            <select id="plan" name="plan" class="form-select" required>
+                                <option value="" disabled selected>選択してください</option>
+                                <option value="light">ライトプラン（まず試したい）</option>
+                                <option value="premium">上位プラン（助成金活用・成果重視）</option>
+                                <option value="consultation">まずは相談したい</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reason" class="form-label">受講理由・課題感 <span class="required">必須</span></label>
+                        <textarea id="reason" name="reason" class="form-textarea" rows="5"
+                            placeholder="例：社内のAI活用が進まない、業務効率化をしたいが何から始めればいいかわからない、など" required></textarea>
+                    </div>
+
+                    <div class="form-submit">
+                        <button type="submit" class="btn-cta">送信する</button>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-top">
+                <a href="https://www.withprojects.co.jp/with-ai-dx/" class="footer-logo">With AI <span>-project
+                        DX-</span></a>
+                <nav class="footer-nav">
+                    <a href="https://timerex.net/s/soumu-001_81ed/41ad7442/" target="_blank">無料相談</a>
+                    <a href="https://www.withprojects.co.jp/about-us/" target="_blank">会社案内</a>
+                    <a href="https://www.withprojects.co.jp/privacypolicy/" target="_blank">プライバシーポリシー</a>
+                    <a href="https://www.withprojects.co.jp/contacts/" target="_blank">お問い合わせ</a>
+                </nav>
+            </div>
+
+            <div class="footer-marks-container">
+                <div class="p-mark-wrapper">
+                    <a href="https://privacymark.jp/" target="_blank">
+                        <img src="https://www.withprojects.co.jp/with-ai-dx/wp-content/themes/service-lp/src/img/common/privacy-mark.png"
+                            alt="プライバシーマーク" class="p-mark-img">
+                    </a>
+                </div>
+                <div class="footer-divider"></div>
+                <div class="sdgs-wrapper">
+                    <img src="https://www.withprojects.co.jp/with-ai-dx/wp-content/themes/service-lp/src/img/common/sdgs.png"
+                        alt="SDGs" class="sdgs-logo">
+                    <p class="sdgs-text">私たちは持続可能な開発目標（SDGs）を<br>支援しています</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    Copyright (C) 2009-2025 WITHPROJECTS,inc All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const mode = params.get('mode');
+            const planSelect = document.getElementById('plan');
+            const reasonTextarea = document.getElementById('reason');
+
+            if (mode && planSelect) {
+                switch (mode) {
+                    case 'light':
+                        planSelect.value = 'light';
+                        break;
+                    case 'premium':
+                        planSelect.value = 'premium';
+                        break;
+                    case 'consultation':
+                        planSelect.value = 'consultation';
+                        break;
+                    case 'subsidy':
+                        // 助成金チェックの場合は「まずは相談したい」を選択し、理由欄に自動入力
+                        planSelect.value = 'consultation';
+                        if (reasonTextarea) {
+                            reasonTextarea.value = '助成金の対象となるか診断をお願いします。';
+                        }
+                        break;
+                    default:
+                        // Default fallback if needed
+                        break;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

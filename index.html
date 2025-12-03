@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>withAI | 助成金で最大75%削減 AI導入・リスキリング講座</title>
+    <meta name="description" content="AI導入を最短1週間で実装。助成制度で最大75%軽減できる可能性も。withprojects株式会社が提供する、実践型AIリスキリング講座「withAI」。">
+
+    <!-- Google Fonts: Noto Sans JP & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Outfit:wght@400;600;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="#" class="logo">withAI<span>.</span></a>
+            <nav class="header-nav">
+                <a href="#about" class="nav-link">特徴</a>
+                <a href="#subsidy" class="nav-link">助成金</a>
+                <a href="#curriculum" class="nav-link">カリキュラム</a>
+                <a href="#pricing" class="nav-link">料金</a>
+                <a href="https://timerex.net/s/soumu-001_81ed/41ad7442/" target="_blank" class="header-btn">無料相談</a>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="メニューを開く">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- ① ヒーローセクション -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="container hero-content">
+                <div class="hero-badge fade-in-up">AI導入の「壁」を突破する</div>
+                <h1 class="fade-in-up delay-1">AI導入を<br>“最短1週間で実装”。</h1>
+                <p class="hero-subcopy fade-in-up delay-2">
+                    助成制度で最大75％軽減できる可能性も。<br>
+                    <span class="note">※助成制度の活用には審査があります。</span>
+                </p>
+                <p class="hero-desc fade-in-up delay-2">
+                    業務改革の壁を「伴走型AI導入」で突破。<br>
+                    補助制度を活用しながら、現場で使えるAIを2時間で構築します。
+                </p>
+                <div class="hero-cta-group fade-in-up delay-3">
+                    <a href="https://timerex.net/s/soumu-001_81ed/41ad7442/" target="_blank" class="btn-cta">無料相談する</a>
+                    <a href="https://docs.google.com/presentation/d/1IixtlR9O7x53iPtKEahb3BG0H4c3HQOpYt9iNFELFes/edit?usp=sharing"
+                        target="_blank" class="btn-cta btn-secondary">資料ダウンロード</a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <div class="mouse"></div>
+            </div>
+        </section>
+
+        <!-- ①.5 トンネル効果画像（明るいオフィス） -->
+        <section class="section--visual-break">
+            <div class="visual-break-img"
+                style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000&auto=format&fit=crop');">
+            </div>
+        </section>
+
+        <!-- ② 信頼構築ブロック（成果データ） -->
+        <section id="about" class="section section--trust">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">導入企業の平均成果</h2>
+                    <p class="section-subtitle">数字で証明される、圧倒的な投資対効果。</p>
+                    <div class="scroll-cue">▼</div>
+                </div>
+                <div class="trust-grid">
+                    <div class="trust-item scroll-reveal">
+                        <div class="trust-icon">📈</div>
+                        <div class="trust-text">業務効率<br><span class="highlight-text">60%以上改善</span></div>
+                    </div>
+                    <div class="trust-item scroll-reveal delay-1">
+                        <div class="trust-icon">💰</div>
+                        <div class="trust-text">年間コスト削減<br><span class="highlight-text">528万円/人</span></div>
+                    </div>
+                    <div class="trust-item scroll-reveal delay-2">
+                        <div class="trust-icon">🚀</div>
+                        <div class="trust-text">ROI(投資回収率)<br><span class="highlight-text">1000%超</span></div>
+                    </div>
+                    <div class="trust-item scroll-reveal delay-3">
+                        <div class="trust-icon">⏱️</div>
+                        <div class="trust-text">投資回収期間<br><span class="highlight-text">平均3ヶ月</span></div>
+                    </div>
+                </div>
+                <div class="trust-note">
+                    <p>受講後のAI活用自信度：22% → <strong>95%</strong> に向上</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ③ 課題提示（Before） -->
+        <section class="section section--problem">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">AI導入には、<br>こんな“見えない壁”があります。</h2>
+                    <p class="section-subtitle">多くの企業が直面する、導入のハードル。</p>
+                </div>
+                <div class="problem-list scroll-reveal">
+                    <div class="problem-item">
+                        <span class="check-icon">✕</span>
+                        <p>何から始めればいいかわからない</p>
+                    </div>
+                    <div class="problem-item">
+                        <span class="check-icon">✕</span>
+                        <p>導入しても社内で使われない</p>
+                    </div>
+                    <div class="problem-item">
+                        <span class="check-icon">✕</span>
+                        <p>社員のITリテラシーに不安</p>
+                    </div>
+                    <div class="problem-item">
+                        <span class="check-icon">✕</span>
+                        <p>専門ベンダーに頼むと高額</p>
+                    </div>
+                    <div class="problem-item">
+                        <span class="check-icon">✕</span>
+                        <p>AIが正しく使われず情報漏洩のリスク</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ④ 解決策（After） -->
+        <section class="section section--solution">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">その壁を、<br>AI導入の専門チームが一緒に解決します。</h2>
+                    <p class="section-subtitle">専門家の伴走で、リスクを抑えながら最短で成果へ。</p>
+                    <div class="scroll-cue">▼</div>
+                </div>
+                <div class="solution-content">
+                    <div class="solution-list scroll-reveal">
+                        <div class="solution-item">
+                            <span class="check-icon">✔</span>
+                            <p>最短1週間でAI業務フローを構築</p>
+                        </div>
+                        <div class="solution-item">
+                            <span class="check-icon">✔</span>
+                            <p>現場がそのまま使えるテンプレート提供</p>
+                        </div>
+                        <div class="solution-item">
+                            <span class="check-icon">✔</span>
+                            <p>社員のITリテラシーに合わせて伴走</p>
+                        </div>
+                        <div class="solution-item">
+                            <span class="check-icon">✔</span>
+                            <p>AI活用のミスを防ぐ安全ガイドライン設計</p>
+                        </div>
+                        <div class="solution-item">
+                            <span class="check-icon">✔</span>
+                            <p>助成制度の活用をサポート</p>
+                        </div>
+                    </div>
+                    <div class="solution-visual scroll-reveal delay-2">
+                        <div class="visual-box">
+                            <div class="visual-before">
+                                <span>Before</span>
+                                <p>残業・手作業</p>
+                            </div>
+                            <div class="visual-arrow">➡</div>
+                            <div class="visual-after">
+                                <span>After</span>
+                                <p>作業時間<br>60%削減</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ④.5 採用戦略セクション -->
+        <section class="section section--recruitment">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">「AI研修」は、<br>最強の採用戦略になります。</h2>
+                    <p class="section-subtitle">求職者は「AIスキルで成長できる会社」を重視しています。</p>
+                </div>
+                <div class="recruitment-grid scroll-reveal">
+                    <div class="recruitment-card">
+                        <div class="recruitment-icon">👥</div>
+                        <h3>応募数・質の向上</h3>
+                        <p>採用ページに「AI研修あり」と記載するだけで、成長意欲の高い人材のクリック率がUPします。</p>
+                    </div>
+                    <div class="recruitment-card">
+                        <div class="recruitment-icon">⚡</div>
+                        <h3>即戦力化</h3>
+                        <p>「新人研修＋AI講座」の組み合わせで、入社後すぐにAIを活用できる人材へと育成可能です。</p>
+                    </div>
+                    <div class="recruitment-card">
+                        <div class="recruitment-icon">🤝</div>
+                        <h3>定着率UP</h3>
+                        <p>スキルアップの機会を提供することで、従業員満足度と定着率が向上します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ⑤ 助成制度ブロック -->
+        <section id="subsidy" class="section section--subsidy" aria-labelledby="subsidy-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="subsidy-title" class="section-title">助成金活用について</h2>
+                </div>
+
+                <div class="subsidy-container scroll-reveal">
+                    <!-- 比較カード削除 -->
+
+                    <div class="subsidy-info-grid">
+                        <div class="info-card">
+                            <div class="info-icon" aria-hidden="true">📋</div>
+                            <h3>要件が合う企業例</h3>
+                            <ul class="check-list">
+                                <li>正規雇用されている社員が1名以上いる</li>
+                                <li>雇用保険・社会保険に加入している</li>
+                                <li>会社都合の解雇を半年以内にしていない</li>
+                            </ul>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon" aria-hidden="true">✨</div>
+                            <h3>メリット</h3>
+                            <ul class="check-list">
+                                <li>申請しやすい（事業内職業能力開発計画）</li>
+                                <li>申請フルサポートあり</li>
+                                <li>訓練期間中の賃金助成もあり</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="subsidy-cta-wrapper">
+                        <a href="https://www.withprojects.co.jp/contacts/" target="_blank"
+                            class="btn-cta btn-secondary">助成金の対象か簡単チェックする</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ⑥ サービス全体像 -->
+        <section class="section section--flow-diagram">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">AI導入までの流れ</h2>
+                </div>
+                <div class="flow-diagram scroll-reveal">
+                    <div class="flow-step-box">課題整理</div>
+                    <div class="flow-arrow">➡</div>
+                    <div class="flow-step-box">AI化<br>プランニング</div>
+                    <div class="flow-arrow">➡</div>
+                    <div class="flow-step-box">プロンプト<br>設計</div>
+                    <div class="flow-arrow">➡</div>
+                    <div class="flow-step-box">業務自動化<br>テンプレ提供</div>
+                    <div class="flow-arrow">➡</div>
+                    <div class="flow-step-box">実装<br>サポート</div>
+                    <div class="flow-arrow">➡</div>
+                    <div class="flow-step-box">社内<br>展開支援</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ⑥.5 研修設計思想（New） -->
+        <section class="section section--philosophy" aria-labelledby="philosophy-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="philosophy-title" class="section-title">研修設計思想<br><span
+                            class="section-subtitle-sm">（なぜ効果が出るのか？）</span></h2>
+                    <p class="section-subtitle">本研修は、単なるAIツール講座ではありません。</p>
+                </div>
+                <ol class="philosophy-grid">
+                    <li class="philosophy-card scroll-reveal">
+                        <div class="phil-num" aria-hidden="true">01</div>
+                        <h3>“思考法 → 実践 → 業務設計”の<br>完全三段階</h3>
+                        <ul>
+                            <li>AI思考法を理解（指示の出し方・思考の構造化）</li>
+                            <li>業務で使えるレベルまで練習（実務ワーク中心）</li>
+                            <li>自社の業務に落とし込む（業務フロー・プロンプト設計）</li>
+                        </ul>
+                    </li>
+                    <li class="philosophy-card scroll-reveal delay-1">
+                        <div class="phil-num" aria-hidden="true">02</div>
+                        <h3>現場での再現性が高い理由</h3>
+                        <ul>
+                            <li>全内容が「実際の業務に結びつく」構造</li>
+                            <li>ChatGPTやGeminiを使い、その場で改善</li>
+                            <li>ワーク中心の“演習比率60%以上”</li>
+                            <li>プログラミング不要</li>
+                        </ul>
+                    </li>
+                    <li class="philosophy-card scroll-reveal delay-2">
+                        <div class="phil-num" aria-hidden="true">03</div>
+                        <h3>AI初心者でも結果が出る理由</h3>
+                        <ul>
+                            <li>専門用語を排除</li>
+                            <li>PC基礎があれば誰でも操作可能</li>
+                            <li>各業務をAIに置き換える具体的手順が明確</li>
+                            <li>“つまずきポイント”を逆算してカリキュラムを作成</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ⑦ カリキュラム（詳細版） -->
+        <section id="curriculum" class="section section--curriculum">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">実践型AI研修プログラム<br>（全10時間）</h2>
+                    <p class="section-subtitle">
+                        わずか10時間で、AIを「知っている」から「業務で使いこなせる」へ。<br>
+                        基礎から応用まで、実務直結のスキルを凝縮したプログラムです。
+                    </p>
+                    <div class="scroll-cue">▼</div>
+                </div>
+
+                <div class="curriculum-list detailed">
+                    <div class="curriculum-card detailed scroll-reveal">
+                        <div class="season-header season-1"
+                            style="background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);">
+                            <span class="season-badge">完全網羅</span>
+                            <h3>AI活用マスターコース</h3>
+                            <p>思考法から実務適用まで、一気通貫で習得します。</p>
+                        </div>
+                        <div class="season-body">
+                            <div class="season-module">
+                                <h4>1. AI思考法のインストール</h4>
+                                <ul>
+                                    <li>ChatGPT/Geminiの得意・不得意を理解</li>
+                                    <li>「目的→制約→形式」の黄金フォーマット</li>
+                                    <li>AIが間違う理由とその修正プロセス</li>
+                                </ul>
+                            </div>
+                            <div class="season-module">
+                                <h4>2. プロンプトエンジニアリング基礎</h4>
+                                <ul>
+                                    <li>5W1Hでの情報整理術</li>
+                                    <li>回答精度を劇的に上げる「役割付与」</li>
+                                    <li>Before/After体験ワークショップ</li>
+                                </ul>
+                            </div>
+                            <div class="season-module">
+                                <h4>3. 業務効率化の実践（文書・資料）</h4>
+                                <ul>
+                                    <li>メール・議事録・日報の自動生成（30分→5分）</li>
+                                    <li>箇条書きから企画書・提案書を作成</li>
+                                    <li>Excelデータの分析と要約</li>
+                                </ul>
+                            </div>
+                            <div class="season-module">
+                                <h4>4. 自社業務への落とし込み</h4>
+                                <ul>
+                                    <li>実際の業務フローをAIで再設計</li>
+                                    <li>部署ごとの「使えるプロンプト」作成</li>
+                                    <li>業務マニュアルの自動化</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="season-goal">
+                            <span class="goal-label">🎯 研修のゴール</span>
+                            <ul>
+                                <li>日常業務の50%以上をAIで効率化できる</li>
+                                <li>自分だけの「専属アシスタント」としてAIを使いこなす</li>
+                                <li>社内のAI推進リーダーとして活躍できる</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+        <!-- ⑧.8 研修で得られるもの（総まとめ） -->
+        <section class="section section--summary" aria-labelledby="summary-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="summary-title" class="section-title">研修で得られるもの</h2>
+                </div>
+                <div class="summary-grid scroll-reveal">
+                    <div class="summary-card">
+                        <div class="summary-icon" aria-hidden="true">📈</div>
+                        <h3>成果を出せるレベルへ</h3>
+                        <p>AIを「なんとなく使える」状態から、<br><strong>「実務で成果を出せる」</strong>状態へ。</p>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-icon" aria-hidden="true">⚙️</div>
+                        <h3>業務最適化力</h3>
+                        <p>自分の業務を分解し、<br>AIで<strong>再構築・最適化する力</strong>が身につく。</p>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-icon" aria-hidden="true">🚩</div>
+                        <h3>AI推進リーダー</h3>
+                        <p>部署内でのAI活用を<strong>リードし、<br>周囲を巻き込む</strong>存在になれる。</p>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-icon" aria-hidden="true">🚀</div>
+                        <h3>組織の生産性向上</h3>
+                        <p>個人のスキルアップが波及し、<br>全社の生産性が<strong>安定して向上</strong>する。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ⑧.5 サポート体制 -->
+        <!-- ⑧.5 サポート体制 -->
+        <section class="section section--support" aria-labelledby="support-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="support-title" class="section-title">充実のサポート</h2>
+                </div>
+                <ul class="support-list scroll-reveal">
+                    <li class="support-item">
+                        <div class="support-icon" aria-hidden="true">🤝</div>
+                        <p>1ヶ月後フォローアップ</p>
+                    </li>
+                    <li class="support-item">
+                        <div class="support-icon" aria-hidden="true">📚</div>
+                        <p>業務別AIプロンプト集<br>（200種以上）</p>
+                    </li>
+                    <li class="support-item">
+                        <div class="support-icon" aria-hidden="true">💻</div>
+                        <p>研修後1ヶ月の<br>オンラインサポート</p>
+                    </li>
+                    <li class="support-item">
+                        <div class="support-icon" aria-hidden="true">💬</div>
+                        <p>チャット質問無制限</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ⑨ プラン比較 -->
+        <section id="pricing" class="section section--pricing">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">料金プラン</h2>
+                </div>
+
+                <div class="plan-comparison">
+                    <!-- 社長・役員向けプラン -->
+                    <div class="plan-card light scroll-reveal">
+                        <h3 class="plan-title">社長・役員向けコース<span class="plan-subtitle">AI導入の判断軸を作る</span></h3>
+                        <div class="plan-price-box">
+                            <div class="plan-price">
+                                <span class="amount">50,000</span><span class="currency">円</span><span
+                                    class="tax">（税込）</span>
+                            </div>
+                            <p class="price-note">※助成金対象外</p>
+                        </div>
+                        <div class="plan-spec">
+                            <dl>
+                                <dt>研修時間</dt>
+                                <dd>2時間（集中講義）</dd>
+                                <dt>形式</dt>
+                                <dd>オンライン（Zoom / Google Meet）</dd>
+                            </dl>
+                        </div>
+                        <ul class="plan-features">
+                            <li>経営層向けAI活用概論</li>
+                            <li>リスクとセキュリティ</li>
+                            <li>導入判断のためのロードマップ</li>
+                        </ul>
+                        <div class="plan-cta-wrapper">
+                            <a href="https://timerex.net/s/soumu-001_81ed/41ad7442/" target="_blank"
+                                class="btn-cta btn-secondary">相談する</a>
+                        </div>
+                    </div>
+
+                    <!-- 社員底上げプラン -->
+                    <div class="plan-card premium scroll-reveal delay-1">
+                        <div class="recommend-tag">人気No.1</div>
+                        <h3 class="plan-title">社員底上げコース<span class="plan-subtitle">実務で使えるスキルを習得</span></h3>
+                        <div class="plan-price-box">
+                            <div class="plan-price">
+                                <span class="amount">300,000</span><span class="currency">円</span><span
+                                    class="tax">（税込）/人</span>
+                            </div>
+                            <div class="price-row final">
+                                <span class="label">3名受講で実質</span>
+                                <span class="value">75,000</span><span class="currency">円〜</span>
+                            </div>
+                            <p class="price-note">※3名以上で75%助成の可能性あり</p>
+                        </div>
+                        <div class="plan-spec">
+                            <dl>
+                                <dt>研修時間</dt>
+                                <dd>全10時間</dd>
+                                <dt>形式</dt>
+                                <dd>オンライン（Zoom / Google Meet）</dd>
+                            </dl>
+                        </div>
+                        <ul class="plan-features">
+                            <li><strong>全カリキュラム（実践型10時間）</strong></li>
+                            <li><strong>助成金申請フルサポート</strong></li>
+                            <li>プロンプト集（200種以上）</li>
+                            <li>業務別ショートビデオ（共通業務・営業職・人事部）</li>
+                            <li>1ヶ月後フォローアップ会議</li>
+                            <li>録画アーカイブ提供</li>
+                        </ul>
+                        <div class="plan-cta-wrapper">
+                            <a href="https://www.withprojects.co.jp/contacts/" target="_blank"
+                                class="btn-cta">助成金チェック＋申込み相談</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ⑩ 導入ステップ -->
+        <section class="section section--steps">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">導入はとてもシンプルです</h2>
+                </div>
+                <div class="simple-steps">
+                    <div class="step-item scroll-reveal">
+                        <div class="step-num">01</div>
+                        <div class="step-text">無料相談<br>↓<br>課題整理</div>
+                    </div>
+                    <div class="step-arrow">➡</div>
+                    <div class="step-item scroll-reveal delay-1">
+                        <div class="step-num">02</div>
+                        <div class="step-text">業務棚卸し<br>↓<br>改善ポイント可視化</div>
+                    </div>
+                    <div class="step-arrow">➡</div>
+                    <div class="step-item scroll-reveal delay-2">
+                        <div class="step-num">03</div>
+                        <div class="step-text">導入開始<br>↓<br>最短1週間で成果</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ⑪ FAQ -->
+        <section class="section section--faq">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">よくある質問</h2>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question">AIに詳しい社員がいないのですが、大丈夫ですか？<span class="icon"></span></button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                はい、全く問題ありません。受講者の7割以上が「AIを使ったことがない」状態からスタートしています。専門用語を使わず、実務での使い方に特化してレクチャーしますのでご安心ください。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">オンラインでの受講は可能ですか？<span class="icon"></span></button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                はい、本研修はZoomまたはGoogle Meetを用いた完全オンライン形式で実施可能です。全国どこからでも、在宅勤務中の社員様でも受講いただけます。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">ChatGPTのアカウントは必要ですか？<span class="icon"></span></button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                はい、受講者様各自でご用意をお願いしております。無料版（GPT-3.5/4o
+                                mini）でも受講可能ですが、画像生成や高度な分析を行う場合は有料版（GPT-4）の推奨をしております。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">助成金の申請は手伝ってもらえますか？<span class="icon"></span></button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                はい、プレミアムプラン（社員底上げコース）では、申請に必要な計画届や支給申請書の作成を社会保険労務士と連携してフルサポートいたします。※受給には審査があり、100%の保証をするものではありません。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">欠席した社員へのフォローはありますか？<span class="icon"></span></button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                プレミアムプランでは、研修の録画データをアーカイブとして提供いたします。欠席された方や、復習したい方は期間内であれば何度でも視聴可能です。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">自社の業界に合わせてカリキュラムを調整できますか？<span class="icon"></span></button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                はい、可能です。事前のヒアリングで御社の業務内容（営業、製造、事務など）を伺い、実習で使うプロンプトや事例を業界特化の内容にカスタマイズいたします。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">支払い方法について教えてください。<span class="icon"></span></button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                法人様向けの請求書払い（月末締め・翌月末払い）に対応しております。その他のお支払い条件をご希望の場合はご相談ください。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ⑫ クロージングCTA -->
+        <section class="section section--closing">
+            <div class="container">
+                <h2 class="closing-title">まずは30分の無料相談から。<br>最短1週間で研修開始できます。</h2>
+                <div class="closing-cta-group">
+                    <a href="https://timerex.net/s/soumu-001_81ed/41ad7442/" target="_blank"
+                        class="btn-cta">無料相談を申し込む</a>
+                </div>
+
+                <div class="closing-secondary">
+                    <p class="closing-note">
+                        完全無料・無理な営業なし<br>
+                        助成金の適用可否もその場で判断
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-top">
+                <a href="cases.html" class="footer-logo">導入事例</a>
+                <nav class="footer-nav">
+                    <a href="https://timerex.net/s/soumu-001_81ed/41ad7442/" target="_blank">無料相談</a>
+                    <a href="https://www.withprojects.co.jp/about-us/" target="_blank">会社案内</a>
+                    <a href="https://www.withprojects.co.jp/privacypolicy/" target="_blank">プライバシーポリシー</a>
+                    <a href="https://www.withprojects.co.jp/contacts/" target="_blank">お問い合わせ</a>
+                </nav>
+            </div>
+
+            <div class="footer-marks-container">
+                <div class="p-mark-wrapper">
+                    <a href="https://privacymark.jp/" target="_blank">
+                        <img src="https://www.withprojects.co.jp/with-ai-dx/wp-content/themes/service-lp/src/img/common/privacy-mark.png"
+                            alt="プライバシーマーク" class="p-mark-img">
+                    </a>
+                </div>
+                <div class="footer-divider"></div>
+                <div class="sdgs-wrapper">
+                    <img src="https://www.withprojects.co.jp/with-ai-dx/wp-content/themes/service-lp/src/img/common/sdgs.png"
+                        alt="SDGs" class="sdgs-logo">
+                    <p class="sdgs-text">私たちは持続可能な開発目標（SDGs）を<br>支援しています</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    Copyright (C) 2009-2025 WITHPROJECTS,inc All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
