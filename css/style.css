@@ -1819,3 +1819,80 @@ img {
         padding: 24px;
     }
 }
+
+/* =========================================
+   Master Course Highlighting
+   ========================================= */
+.curriculum-card.detailed {
+    padding: 0;
+    display: block;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+}
+
+.season-header {
+    padding: 40px;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.season-badge {
+    display: inline-block;
+    background: var(--color-gold);
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 6px 16px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.season-header h3 {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.season-header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.season-goal {
+    background: #FFFBEB; /* Light yellow */
+    padding: 30px;
+    margin-top: 20px;
+    border-top: 1px solid #F59E0B;
+}
+
+.season-goal .goal-label {
+    display: block;
+    text-align: center;
+    color: #D97706;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.season-goal ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.season-goal ul li {
+    position: relative;
+    padding-left: 1.5em;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: var(--color-navy);
+}
+
+.season-goal ul li::before {
+    content: "🎯";
+    position: absolute;
+    left: 0;
+}
