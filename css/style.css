@@ -301,8 +301,8 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.8)),
-        url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2000&auto=format&fit=crop');
+    background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)),
+        url('../images/hero_bg.png');
     background-size: cover;
     background-position: center;
     z-index: -1;
@@ -1846,7 +1846,7 @@ img {
     padding: 6px 16px;
     border-radius: 50px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .season-header h3 {
@@ -1861,7 +1861,8 @@ img {
 }
 
 .season-goal {
-    background: #FFFBEB; /* Light yellow */
+    background: #FFFBEB;
+    /* Light yellow */
     padding: 30px;
     margin-top: 20px;
     border-top: 1px solid #F59E0B;
