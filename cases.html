@@ -15,7 +15,9 @@
     <!-- 追加のスタイル（cases.html専用） -->
     <style>
         .page-header {
-            background: linear-gradient(135deg, var(--color-navy) 0%, #1E293B 100%);
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(30, 41, 59, 0.8) 100%), url('../images/cases/cases-hero.png');
+            background-size: cover;
+            background-position: center;
             color: white;
             padding: 120px 0 60px;
             text-align: center;
@@ -24,14 +26,7 @@
         }
 
         .page-header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.05)"/></svg>');
-            opacity: 0.3;
+            content: none;
         }
 
         .page-title {
@@ -114,6 +109,24 @@
             transform: scaleX(1);
         }
 
+        .case-img-container {
+            width: 100%;
+            height: 180px;
+            overflow: hidden;
+            border-bottom: 1px solid #E2E8F0;
+        }
+
+        .case-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .case-card:hover .case-img-container img {
+            transform: scale(1.1);
+        }
+
         .case-header {
             background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
             padding: 24px;
@@ -129,6 +142,15 @@
         .case-icon {
             font-size: 1.8rem;
             flex-shrink: 0;
+            line-height: 1;
+        }
+
+        .case-icon-img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            flex-shrink: 0;
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
         }
 
         .case-body {
@@ -194,13 +216,40 @@
 
         .scenario-item {
             background: white;
-            padding: 32px 28px;
             border-radius: 16px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
             border: 1px solid #E2E8F0;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            /* Padding removed for full-width image */
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .scenario-content {
+            padding: 32px 28px;
+            flex-grow: 1;
+        }
+
+        .scenario-img-container {
+            width: 100%;
+            height: 160px;
+            overflow: hidden;
+            border-bottom: 1px solid #E2E8F0;
+            flex-shrink: 0;
+        }
+
+        .scenario-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .scenario-item:hover .scenario-img-container img {
+            transform: scale(1.1);
         }
 
         .scenario-item::before {
@@ -213,6 +262,7 @@
             background: linear-gradient(135deg, rgba(217, 119, 6, 0.03) 0%, rgba(245, 158, 11, 0.03) 100%);
             opacity: 0;
             transition: opacity 0.3s ease;
+            pointer-events: none;
         }
 
         .scenario-item:hover {
@@ -275,8 +325,21 @@
 
         /* Enhanced Data Section */
         .section--data {
-            background: linear-gradient(to bottom, #ffffff 0%, #F8FAFC 100%);
+            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), url('images/office_scene.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             position: relative;
+            color: white;
+            padding: 100px 0;
+        }
+
+        .section--data .section-title {
+            color: white;
+        }
+
+        .section--data .section-subtitle {
+            color: rgba(255, 255, 255, 0.9);
         }
 
         .data-grid {
@@ -287,12 +350,13 @@
         }
 
         .data-card {
-            background: white;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
             padding: 32px 24px;
             border-radius: 16px;
             text-align: center;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-            border: 1px solid #E2E8F0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -312,8 +376,9 @@
 
         .data-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-            border-color: #3B82F6;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+            border-color: rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.15);
         }
 
         .data-card:hover::before {
@@ -321,7 +386,7 @@
         }
 
         .data-card.highlight {
-            background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+            background: linear-gradient(135deg, rgba(254, 243, 199, 0.15) 0%, rgba(253, 230, 138, 0.15) 100%);
             border-color: var(--color-gold);
         }
 
@@ -337,12 +402,13 @@
             font-size: 2.5rem;
             margin-bottom: 16px;
             display: block;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .data-card h4 {
             font-size: 1rem;
             font-weight: 600;
-            color: var(--color-text-sub);
+            color: rgba(255, 255, 255, 0.9);
             margin-bottom: 16px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -350,7 +416,7 @@
 
         .data-val {
             font-size: 1.1rem;
-            color: var(--color-text-main);
+            color: white;
             font-weight: 500;
             display: flex;
             align-items: center;
@@ -368,14 +434,37 @@
         .data-val strong {
             font-size: 2rem;
             font-weight: 900;
-            color: #3B82F6;
+            color: #60A5FA;
             display: block;
             line-height: 1;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .data-card.highlight .data-val strong {
             color: var(--color-gold);
             font-size: 2.2rem;
+        }
+
+        /* Closing CTA Section */
+        .section--closing {
+            background: linear-gradient(rgba(30, 41, 59, 0.9), rgba(30, 41, 59, 0.8)), url('images/hero_bg.png');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            color: white;
+            text-align: center;
+        }
+
+        .closing-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            line-height: 1.4;
+            color: white;
+        }
+
+        .section--closing .closing-note {
+            color: rgba(255, 255, 255, 0.8);
         }
     </style>
 </head>
@@ -457,8 +546,11 @@
 
                 <div class="case-grid">
                     <div class="case-card">
+                        <div class="case-img-container">
+                            <img src="images/cases/case_sales.jpg" alt="Sales Case Study">
+                        </div>
                         <div class="case-header">
-                            <span class="case-icon">💼</span>
+                            <img src="images/cases/icon-sales.png" class="case-icon-img" alt="Sales Icon">
                             <span>営業部門（35歳／主任）</span>
                         </div>
                         <div class="case-body">
@@ -478,8 +570,11 @@
                         </div>
                     </div>
                     <div class="case-card">
+                        <div class="case-img-container">
+                            <img src="images/cases/case_food.jpg" alt="Food Industry Case Study">
+                        </div>
                         <div class="case-header">
-                            <span class="case-icon">🍽️</span>
+                            <img src="images/cases/icon-food.png" class="case-icon-img" alt="Food Icon">
                             <span>飲食店店長</span>
                         </div>
                         <div class="case-body">
@@ -499,8 +594,11 @@
                         </div>
                     </div>
                     <div class="case-card">
+                        <div class="case-img-container">
+                            <img src="images/cases/case_advertising.jpg" alt="Advertising Case Study">
+                        </div>
                         <div class="case-header">
-                            <span class="case-icon">📢</span>
+                            <img src="images/cases/icon-advertising.png" class="case-icon-img" alt="Advertising Icon">
                             <span>広告代理店</span>
                         </div>
                         <div class="case-body">
@@ -520,6 +618,9 @@
                         </div>
                     </div>
                     <div class="case-card">
+                        <div class="case-img-container">
+                            <img src="images/cases/case_hr.jpg" alt="Recruitment Case Study">
+                        </div>
                         <div class="case-header">
                             <span class="case-icon">👔</span>
                             <span>転職エージェント</span>
@@ -541,6 +642,9 @@
                         </div>
                     </div>
                     <div class="case-card">
+                        <div class="case-img-container">
+                            <img src="images/cases/case_realestate.jpg" alt="Real Estate Case Study">
+                        </div>
                         <div class="case-header">
                             <span class="case-icon">🏢</span>
                             <span>不動産会社</span>
@@ -562,6 +666,9 @@
                         </div>
                     </div>
                     <div class="case-card">
+                        <div class="case-img-container">
+                            <img src="images/cases/case_legal.jpg" alt="Legal Case Study">
+                        </div>
                         <div class="case-header">
                             <span class="case-icon">⚖️</span>
                             <span>法律事務所</span>
@@ -592,84 +699,124 @@
                 <h2 id="scenarios-title" class="case-category-title">業務別 改善イメージ</h2>
                 <div class="scenario-list">
                     <div class="scenario-item">
-                        <h3 class="scenario-head" data-icon="💼">営業</h3>
-                        <ul>
-                            <li>提案資料作成：3時間 → 30分（90%削減）</li>
-                            <li>顧客ヒアリング内容を自動でまとめて共有</li>
-                            <li>成約率が10%から45%へ大幅向上</li>
-                            <li>競合分析レポートを数分で作成</li>
-                            <li>メール返信の下書きを自動生成</li>
-                        </ul>
+                        <div class="scenario-img-container">
+                            <img src="images/cases/case_sales.jpg" alt="Sales Scenario">
+                        </div>
+                        <div class="scenario-content">
+                            <h3 class="scenario-head" data-icon="💼">営業</h3>
+                            <ul>
+                                <li>提案資料作成：3時間 → 30分（90%削減）</li>
+                                <li>顧客ヒアリング内容を自動でまとめて共有</li>
+                                <li>成約率が10%から45%へ大幅向上</li>
+                                <li>競合分析レポートを数分で作成</li>
+                                <li>メール返信の下書きを自動生成</li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="scenario-item">
-                        <h3 class="scenario-head" data-icon="🍽️">飲食・小売</h3>
-                        <ul>
-                            <li>メニュー開発：1.5ヶ月 → 2週間（6倍速）</li>
-                            <li>魅力的なPOP・商品説明文を自動生成</li>
-                            <li>トレンド分析で売上30%増を実現</li>
-                            <li>SNS投稿コンテンツを一括作成</li>
-                            <li>在庫最適化の提案を自動化</li>
-                        </ul>
+                        <div class="scenario-img-container">
+                            <img src="images/cases/case_food.jpg" alt="Food Scenario">
+                        </div>
+                        <div class="scenario-content">
+                            <h3 class="scenario-head" data-icon="🍽️">飲食・小売</h3>
+                            <ul>
+                                <li>メニュー開発：1.5ヶ月 → 2週間（6倍速）</li>
+                                <li>魅力的なPOP・商品説明文を自動生成</li>
+                                <li>トレンド分析で売上30%増を実現</li>
+                                <li>SNS投稿コンテンツを一括作成</li>
+                                <li>在庫最適化の提案を自動化</li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="scenario-item">
-                        <h3 class="scenario-head" data-icon="👥">人事</h3>
-                        <ul>
-                            <li>面談記録から詳細レポートを自動作成</li>
-                            <li>求人票のブラッシュアップが10倍速に</li>
-                            <li>評価コメントの統一化で公平性向上</li>
-                            <li>研修資料の作成時間を80%削減</li>
-                            <li>従業員エンゲージメント分析を自動化</li>
-                        </ul>
+                        <div class="scenario-img-container">
+                            <img src="images/cases/case_hr.jpg" alt="HR Scenario">
+                        </div>
+                        <div class="scenario-content">
+                            <h3 class="scenario-head" data-icon="👥">人事</h3>
+                            <ul>
+                                <li>面談記録から詳細レポートを自動作成</li>
+                                <li>求人票のブラッシュアップが10倍速に</li>
+                                <li>評価コメントの統一化で公平性向上</li>
+                                <li>研修資料の作成時間を80%削減</li>
+                                <li>従業員エンゲージメント分析を自動化</li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="scenario-item">
-                        <h3 class="scenario-head" data-icon="📋">事務・総務</h3>
-                        <ul>
-                            <li>定型文書作成を完全自動化</li>
-                            <li>社内規定の要約・整形が瞬時に完了</li>
-                            <li>月末処理の負荷を70%軽減</li>
-                            <li>議事録作成を音声から自動生成</li>
-                            <li>契約書のチェック時間を半減</li>
-                        </ul>
+                        <div class="scenario-img-container">
+                            <img src="images/cases/case_admin.jpg" alt="Admin Scenario">
+                        </div>
+                        <div class="scenario-content">
+                            <h3 class="scenario-head" data-icon="📋">事務・総務</h3>
+                            <ul>
+                                <li>定型文書作成を完全自動化</li>
+                                <li>社内規定の要約・整形が瞬時に完了</li>
+                                <li>月末処理の負荷を70%軽減</li>
+                                <li>議事録作成を音声から自動生成</li>
+                                <li>契約書のチェック時間を半減</li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="scenario-item">
-                        <h3 class="scenario-head" data-icon="💰">経理・財務</h3>
-                        <ul>
-                            <li>データチェックの精度が99%以上に</li>
-                            <li>請求書内容の齟齬を自動検出</li>
-                            <li>月次レポートをテンプレ化して即時作成</li>
-                            <li>経費精算の処理時間を60%削減</li>
-                            <li>予算分析レポートを自動生成</li>
-                        </ul>
+                        <div class="scenario-img-container">
+                            <img src="images/cases/case_finance.jpg" alt="Finance Scenario">
+                        </div>
+                        <div class="scenario-content">
+                            <h3 class="scenario-head" data-icon="💰">経理・財務</h3>
+                            <ul>
+                                <li>データチェックの精度が99%以上に</li>
+                                <li>請求書内容の齟齬を自動検出</li>
+                                <li>月次レポートをテンプレ化して即時作成</li>
+                                <li>経費精算の処理時間を60%削減</li>
+                                <li>予算分析レポートを自動生成</li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="scenario-item">
-                        <h3 class="scenario-head" data-icon="🎨">マーケティング</h3>
-                        <ul>
-                            <li>広告コピーを複数パターン自動生成</li>
-                            <li>顧客セグメント分析を瞬時に実行</li>
-                            <li>競合調査レポートを自動作成</li>
-                            <li>キャンペーン企画書の作成時間を75%削減</li>
-                            <li>SNSエンゲージメント分析を自動化</li>
-                        </ul>
+                        <div class="scenario-img-container">
+                            <img src="images/cases/case_marketing.jpg" alt="Marketing Scenario">
+                        </div>
+                        <div class="scenario-content">
+                            <h3 class="scenario-head" data-icon="🎨">マーケティング</h3>
+                            <ul>
+                                <li>広告コピーを複数パターン自動生成</li>
+                                <li>顧客セグメント分析を瞬時に実行</li>
+                                <li>競合調査レポートを自動作成</li>
+                                <li>キャンペーン企画書の作成時間を75%削減</li>
+                                <li>SNSエンゲージメント分析を自動化</li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="scenario-item">
-                        <h3 class="scenario-head" data-icon="💻">IT・開発</h3>
-                        <ul>
-                            <li>技術ドキュメント作成を自動化</li>
-                            <li>コードレビューの効率が2倍に</li>
-                            <li>バグ報告書の作成時間を80%削減</li>
-                            <li>システム仕様書を自然言語から生成</li>
-                            <li>テストケース作成を半自動化</li>
-                        </ul>
+                        <div class="scenario-img-container">
+                            <img src="images/cases/case_it.jpg" alt="IT Scenario">
+                        </div>
+                        <div class="scenario-content">
+                            <h3 class="scenario-head" data-icon="💻">IT・開発</h3>
+                            <ul>
+                                <li>技術ドキュメント作成を自動化</li>
+                                <li>コードレビューの効率が2倍に</li>
+                                <li>バグ報告書の作成時間を80%削減</li>
+                                <li>システム仕様書を自然言語から生成</li>
+                                <li>テストケース作成を半自動化</li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="scenario-item">
-                        <h3 class="scenario-head" data-icon="📞">カスタマーサポート</h3>
-                        <ul>
-                            <li>問い合わせ対応時間を50%削減</li>
-                            <li>FAQを自動生成・更新</li>
-                            <li>顧客満足度が85%から95%へ向上</li>
-                            <li>対応履歴から改善提案を自動抽出</li>
-                            <li>多言語対応を即座に実現</li>
-                        </ul>
+                        <div class="scenario-img-container">
+                            <img src="https://picsum.photos/seed/scen_cs/600/400" alt="CS Scenario">
+                        </div>
+                        <div class="scenario-content">
+                            <h3 class="scenario-head" data-icon="📞">カスタマーサポート</h3>
+                            <ul>
+                                <li>問い合わせ対応時間を50%削減</li>
+                                <li>FAQを自動生成・更新</li>
+                                <li>顧客満足度が85%から95%へ向上</li>
+                                <li>対応履歴から改善提案を自動抽出</li>
+                                <li>多言語対応を即座に実現</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
