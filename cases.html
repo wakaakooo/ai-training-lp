@@ -15,7 +15,7 @@
     <!-- 追加のスタイル（cases.html専用） -->
     <style>
         .page-header {
-            background: linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(30, 41, 59, 0.8) 100%), url('../images/cases/cases-hero.png');
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(30, 41, 59, 0.8) 100%), url('images/cases/cases-hero.png');
             background-size: cover;
             background-position: center;
             color: white;
@@ -70,22 +70,44 @@
             border-radius: 2px;
         }
 
-        /* Enhanced Case Grid */
+        /* Bento Grid System */
         .case-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
             margin-top: 40px;
+            grid-auto-flow: dense;
         }
 
         .case-card {
             background: white;
-            border-radius: 16px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
             border: 1px solid #E2E8F0;
             position: relative;
+            grid-column: span 4;
+            /* Default to 1/3 width */
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Large card (2/3 width) */
+        .case-card.large {
+            grid-column: span 8;
+            grid-row: span 2;
+        }
+
+        /* Wide card (1/2 width) */
+        .case-card.wide {
+            grid-column: span 6;
+        }
+
+        /* Tall card (1/3 width but tall) */
+        .case-card.tall {
+            grid-column: span 4;
+            grid-row: span 2;
         }
 
         .case-card::before {
@@ -96,35 +118,74 @@
             right: 0;
             height: 4px;
             background: linear-gradient(90deg, var(--color-gold-light), var(--color-gold));
-            transform: scaleX(0);
-            transition: transform 0.4s ease;
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
         .case-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
+            z-index: 10;
         }
 
         .case-card:hover::before {
-            transform: scaleX(1);
+            opacity: 1;
+        }
+
+        /* Media Queries for Bento Grid */
+        @media (max-width: 900px) {
+            .case-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .case-card,
+            .case-card.large,
+            .case-card.wide,
+            .case-card.tall {
+                grid-column: span 1;
+                grid-row: auto;
+            }
+
+            .case-card.large {
+                grid-column: span 2;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .case-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .case-card.large {
+                grid-column: span 1;
+            }
         }
 
         .case-img-container {
             width: 100%;
-            height: 180px;
+            height: 200px;
             overflow: hidden;
             border-bottom: 1px solid #E2E8F0;
+            position: relative;
+        }
+
+        .case-card.large .case-img-container {
+            height: 480px;
+        }
+
+        .case-card.tall .case-img-container {
+            height: 320px;
         }
 
         .case-img-container img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.5s ease;
+            transition: transform 0.6s ease;
         }
 
         .case-card:hover .case-img-container img {
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
 
         .case-header {
@@ -154,7 +215,15 @@
         }
 
         .case-body {
-            padding: 28px 24px;
+            padding: 24px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .case-card.large .case-body {
+            padding: 32px;
         }
 
         .case-row {
@@ -216,10 +285,10 @@
 
         .scenario-item {
             background: white;
-            border-radius: 16px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
             border: 1px solid #E2E8F0;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
             position: relative;
             overflow: hidden;
             /* Padding removed for full-width image */
@@ -235,21 +304,22 @@
 
         .scenario-img-container {
             width: 100%;
-            height: 160px;
+            height: 180px;
             overflow: hidden;
             border-bottom: 1px solid #E2E8F0;
             flex-shrink: 0;
+            position: relative;
         }
 
         .scenario-img-container img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.5s ease;
+            transition: transform 0.6s ease;
         }
 
         .scenario-item:hover .scenario-img-container img {
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
 
         .scenario-item::before {
@@ -266,9 +336,10 @@
         }
 
         .scenario-item:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
             border-color: var(--color-gold-light);
+            z-index: 10;
         }
 
         .scenario-item:hover::before {
@@ -545,7 +616,7 @@
                 <h2 id="cases-title" class="case-category-title">業界別 導入事例</h2>
 
                 <div class="case-grid">
-                    <div class="case-card">
+                    <div class="case-card large">
                         <div class="case-img-container">
                             <img src="images/cases/case_sales.jpg" alt="Sales Case Study">
                         </div>
@@ -569,7 +640,7 @@
                             <p class="case-note">✨ 家族との時間が大幅に増加<br>📈 ワークライフバランスが劇的に改善</p>
                         </div>
                     </div>
-                    <div class="case-card">
+                    <div class="case-card tall">
                         <div class="case-img-container">
                             <img src="images/cases/case_food.jpg" alt="Food Industry Case Study">
                         </div>
@@ -593,7 +664,7 @@
                             <p class="case-note">🎯 AIによるトレンド分析で的確な商品開発<br>⚡ 開発スピードが6倍に向上</p>
                         </div>
                     </div>
-                    <div class="case-card">
+                    <div class="case-card wide">
                         <div class="case-img-container">
                             <img src="images/cases/case_advertising.jpg" alt="Advertising Case Study">
                         </div>
@@ -617,7 +688,7 @@
                             <p class="case-note">💡 クリエイティブな時間が3倍に<br>🚀 提案の質とスピードが同時に向上</p>
                         </div>
                     </div>
-                    <div class="case-card">
+                    <div class="case-card wide">
                         <div class="case-img-container">
                             <img src="images/cases/case_hr.jpg" alt="Recruitment Case Study">
                         </div>
@@ -641,7 +712,7 @@
                             <p class="case-note">🎓 候補者とのコミュニケーション時間が増加<br>💪 マッチング精度が大幅に向上</p>
                         </div>
                     </div>
-                    <div class="case-card">
+                    <div class="case-card wide">
                         <div class="case-img-container">
                             <img src="images/cases/case_realestate.jpg" alt="Real Estate Case Study">
                         </div>
@@ -665,7 +736,7 @@
                             <p class="case-note">🏠 顧客対応の質が向上<br>📊 データ分析による最適な提案が可能に</p>
                         </div>
                     </div>
-                    <div class="case-card">
+                    <div class="case-card wide">
                         <div class="case-img-container">
                             <img src="images/cases/case_legal.jpg" alt="Legal Case Study">
                         </div>
@@ -760,7 +831,7 @@
                     </div>
                     <div class="scenario-item">
                         <div class="scenario-img-container">
-                            <img src="images/cases/case_finance.jpg" alt="Finance Scenario">
+                            <img src="images/cases/case_finance.svg" alt="Finance Scenario">
                         </div>
                         <div class="scenario-content">
                             <h3 class="scenario-head" data-icon="💰">経理・財務</h3>
@@ -775,7 +846,7 @@
                     </div>
                     <div class="scenario-item">
                         <div class="scenario-img-container">
-                            <img src="images/cases/case_marketing.jpg" alt="Marketing Scenario">
+                            <img src="images/cases/case_marketing.svg" alt="Marketing Scenario">
                         </div>
                         <div class="scenario-content">
                             <h3 class="scenario-head" data-icon="🎨">マーケティング</h3>
@@ -790,7 +861,7 @@
                     </div>
                     <div class="scenario-item">
                         <div class="scenario-img-container">
-                            <img src="images/cases/case_it.jpg" alt="IT Scenario">
+                            <img src="images/cases/case_it.svg" alt="IT Scenario">
                         </div>
                         <div class="scenario-content">
                             <h3 class="scenario-head" data-icon="💻">IT・開発</h3>
@@ -805,7 +876,7 @@
                     </div>
                     <div class="scenario-item">
                         <div class="scenario-img-container">
-                            <img src="https://picsum.photos/seed/scen_cs/600/400" alt="CS Scenario">
+                            <img src="images/cases/case_cs.svg" alt="CS Scenario">
                         </div>
                         <div class="scenario-content">
                             <h3 class="scenario-head" data-icon="📞">カスタマーサポート</h3>
